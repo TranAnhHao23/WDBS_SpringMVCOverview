@@ -12,7 +12,7 @@ public class DemoController {
 //        return "view";
 //    }
     @GetMapping("/greeting")
-    public ModelAndView changeName(@RequestParam String name) {
+    public ModelAndView changeName(@RequestParam("name") String name) {
         ModelAndView modelAndView = new ModelAndView("view");
         modelAndView.addObject("name", name);
         return modelAndView;
